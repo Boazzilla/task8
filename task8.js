@@ -69,16 +69,16 @@ class Observer {
   const printPhoneNumberObserver = new PrintPhoneNumberObserver();
   const printDialingObserver = new PrintDialingObserver();
   
-  telephone.addObserver(printPhoneNumberObserver);
-  telephone.addObserver(printDialingObserver);
+  console.log(telephone.addObserver(printPhoneNumberObserver));
+  console.log(telephone.addObserver(printDialingObserver));
   
-  telephone.addPhoneNumber("2347023232");
-  telephone.dialPhoneNumber("2347023232");
-  telephone.dialPhoneNumber("1234567890"); // Invalid phone number
+  console.log(telephone.addPhoneNumber("2347023232"));
+  console.log(telephone.dialPhoneNumber("2347023232"));
+  console.log(telephone.dialPhoneNumber("1234567890")); // Invalid phone number
   
-  telephone.removeObserver(printDialingObserver);
+  console.log(telephone.removeObserver(printDialingObserver));
   
-  telephone.dialPhoneNumber("2347023232"); // "Now Dialing" message won't be printed
+  console.log(telephone.dialPhoneNumber("2347023232")); // "Now Dialing" message won't be printed
   
   console.log(telephone.removePhoneNumber("2347023232"));
   
